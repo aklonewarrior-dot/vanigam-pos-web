@@ -1,0 +1,1 @@
+﻿# Vanigam POS Web
