@@ -4,6 +4,9 @@ import 'dotenv/config';
 import { pool } from './db.js';
 import authRoutes from './routes/auth.js';
 import companiesRoutes from './routes/companies.js';
+import categoriesRoutes from './routes/categories.js';
+import unitsRoutes from './routes/units.js';
+import itemsRoutes from './routes/items.js';
 
 const app = express();
 app.use(cors());
@@ -30,6 +33,9 @@ app.get('/', (req, res) => {
 
 app.use('/api/auth', authRoutes);
 app.use('/api/companies', companiesRoutes);
+app.use('/api/companies/:companyId/categories', categoriesRoutes);
+app.use('/api/companies/:companyId/units', unitsRoutes);
+app.use('/api/companies/:companyId/items', itemsRoutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
