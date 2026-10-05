@@ -11,6 +11,7 @@ import customersRoutes from './routes/customers.js';
 import suppliersRoutes from './routes/suppliers.js';
 import salesRoutes from './routes/sales.js';
 import purchasesRoutes from './routes/purchases.js';
+import reportsRoutes from './routes/reports.js';
 
 const app = express();
 app.use(cors());
@@ -34,6 +35,7 @@ app.use('/api/companies/:companyId/customers', customersRoutes);
 app.use('/api/companies/:companyId/suppliers', suppliersRoutes);
 app.use('/api/companies/:companyId/sales', salesRoutes);
 app.use('/api/companies/:companyId/purchases', purchasesRoutes);
+app.use('/api/companies/:companyId/reports', reportsRoutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Vanigam POS API listening on http://localhost:${PORT}`));
