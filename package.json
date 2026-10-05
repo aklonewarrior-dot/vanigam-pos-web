@@ -8,7 +8,7 @@
                     "start":  "node server.js",
                     "dev":  "node --watch server.js",
                     "migrate":  "node migrate.js",
-                    "test":  "node tests/smoke.mjs"
+                    "test":  "node tests/smoke.mjs \u0026\u0026 node tests/reports.mjs"
                 },
     "dependencies":  {
                          "bcryptjs":  "^3.0.3",
